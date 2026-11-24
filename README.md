@@ -1,36 +1,34 @@
-# Aprendia | E-learning analytics
+# Aprendia | Analítica de una plataforma educativa
 
-Aprendia is a team capstone on a simulated e-learning platform. Our team of three analyzed 52,404 records across 12 tables to understand enrollment, course completion, subscriptions and revenue.
+[Read in English](README.en.md)
 
-## My contribution
+Aprendia fue un proyecto de fin de bootcamp sobre una plataforma de aprendizaje simulada. En un equipo de tres personas, analizamos **52.404 registros en 12 tablas** para entender las inscripciones, la finalización de cursos, las suscripciones y los ingresos.
 
-I wrote MySQL queries for business questions, used Python and Pandas to clean and validate data, and built Power BI views for enrollment, completion, subscriptions and revenue. This repository illustrates one of my queries with a small synthetic dataset.
+## Mi aporte
 
-## How do subscription volume and collected revenue compare across plans?
+Escribí consultas en MySQL, limpié y validé datos con Python y Pandas y construí vistas en Power BI para hacer seguimiento de esos indicadores. El repositorio reproduce una de mis consultas con un conjunto pequeño de datos sintéticos.
 
-A subscription can have several payment attempts. Joining plans, subscriptions and payments creates one row per attempt, which can inflate subscription counts. The [query](sql/plan_metrics.sql) aggregates subscriptions and payments separately at plan level before combining the results. It counts all recorded attempts, including pending ones, and adds amounts only for completed payments. Plans with zero attempts have an undefined completion percentage.
+## ¿Cómo se comparan las suscripciones y los ingresos cobrados por plan?
 
-| Plan | Subscriptions | Payment attempts | Completed payments | Collected amount¹ | Completed share |
+Una suscripción puede tener varios intentos de pago. Al cruzar las tablas, cada intento genera una fila y la misma suscripción puede aparecer varias veces. La [consulta SQL](sql/plan_metrics.sql) agrupa suscripciones y pagos por separado antes de combinarlos por plan. Incluye los intentos pendientes en el total y suma el monto de los pagos completados.
+
+| Plan | Suscripciones | Intentos de pago | Pagos completados | Ingresos cobrados¹ | % de intentos completados |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Annual | 1 | 1 | 1 | 90.00 | 100% |
-| Monthly | 2 | 4 | 2 | 24.00 | 50% |
-| Starter | 1 | 0 | 0 | 0.00 | — |
-| Preview | 0 | 0 | 0 | 0.00 | — |
+| Annual | 1 | 1 | 1 | 90,00 | 100 % |
+| Monthly | 2 | 4 | 2 | 24,00 | 50 % |
+| Starter | 1 | 0 | 0 | 0,00 | — |
+| Preview | 0 | 0 | 0 | 0,00 | — |
 
-¹ Synthetic currency units. These figures illustrate the calculation.
+¹ Los montos están expresados en unidades monetarias ficticias. El guion indica que el porcentaje queda sin definir cuando el plan tiene cero intentos.
 
-In the example, Monthly has more subscriptions than Annual, while Annual collects more revenue. The completion percentage uses payment attempts as its denominator. A renewal can produce more than one completed payment for the same subscription, so this percentage describes payment activity rather than subscriber conversion.
+En el ejemplo, el plan mensual tiene más suscripciones y el anual recauda más. El porcentaje mide qué proporción de los **intentos de pago** terminó en un cobro. Una misma suscripción puede generar varios cobros debido a las renovaciones.
 
-## Run the example
+## Cómo reproducir el ejemplo
 
-Run this command from the repository root with Python 3. The script uses SQLite from the Python standard library and checks the results before printing the table. The query also uses syntax compatible with MySQL 8.
+Desde la carpeta principal del repositorio, ejecuta el siguiente comando con Python 3. El programa usa SQLite, incluido en Python, verifica los resultados y luego imprime la tabla. La consulta también es compatible con MySQL 8.
 
 ```sh
 python run_demo.py
 ```
 
-The included [schema and data](sql/demo_data.sql) are synthetic. Amounts are stored as integer cents. The original project was built with MySQL, Python and Power BI.
-
-## Resumen en español
-
-Aprendia fue un proyecto académico en equipo sobre una plataforma de aprendizaje simulada. Mi aporte incluyó consultas en SQL, validación de datos con Python y vistas en Power BI. Este ejemplo muestra cómo separé suscripciones, intentos de pago y cobros completados para comparar los planes sin duplicar registros al cruzar las tablas.
+El [esquema y los datos del ejemplo](sql/demo_data.sql) almacenan los montos en centavos enteros. El proyecto original se desarrolló con MySQL, Python y Power BI.
