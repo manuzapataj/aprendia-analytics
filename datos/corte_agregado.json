@@ -1,0 +1,244 @@
+{
+  "fuente": "PowerBI_Aprendia_Paquete.xlsx",
+  "tablas": [
+    {
+      "tabla": "plan",
+      "filas": 5,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 0
+    },
+    {
+      "tabla": "Usuario",
+      "filas": 5099,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 0
+    },
+    {
+      "tabla": "Curso",
+      "filas": 150,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 0
+    },
+    {
+      "tabla": "Modulo",
+      "filas": 403,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 0
+    },
+    {
+      "tabla": "Leccion",
+      "filas": 5281,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 2663
+    },
+    {
+      "tabla": "Material_leccion",
+      "filas": 10465,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 0
+    },
+    {
+      "tabla": "Inscripcion",
+      "filas": 12833,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 59
+    },
+    {
+      "tabla": "Suscripcion",
+      "filas": 5494,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 23
+    },
+    {
+      "tabla": "Pago",
+      "filas": 5494,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 0
+    },
+    {
+      "tabla": "Detalle_estudiante",
+      "filas": 5000,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 21
+    },
+    {
+      "tabla": "Detalle_Profesor",
+      "filas": 120,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 0
+    },
+    {
+      "tabla": "Certificado",
+      "filas": 1617,
+      "claves_nulas": 0,
+      "claves_repetidas": 0,
+      "referencias_huerfanas": 7
+    }
+  ],
+  "categorias": [
+    {
+      "categoria": "Programación y Desarrollo Web",
+      "inscripciones": 2073,
+      "finalizadas": 544,
+      "abandonadas": 201,
+      "certificados": 278,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 278,
+      "media_dias_validos": 70.23
+    },
+    {
+      "categoria": "Finanzas Personales",
+      "inscripciones": 1583,
+      "finalizadas": 410,
+      "abandonadas": 161,
+      "certificados": 199,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 199,
+      "media_dias_validos": 70.02
+    },
+    {
+      "categoria": "Fotografía y Video",
+      "inscripciones": 1555,
+      "finalizadas": 397,
+      "abandonadas": 144,
+      "certificados": 208,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 208,
+      "media_dias_validos": 70.74
+    },
+    {
+      "categoria": "Marketing Digital",
+      "inscripciones": 1400,
+      "finalizadas": 352,
+      "abandonadas": 142,
+      "certificados": 157,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 157,
+      "media_dias_validos": 69.56
+    },
+    {
+      "categoria": "Negocios y Emprendimiento",
+      "inscripciones": 1336,
+      "finalizadas": 330,
+      "abandonadas": 137,
+      "certificados": 153,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 153,
+      "media_dias_validos": 68.46
+    },
+    {
+      "categoria": "Desarrollo Personal",
+      "inscripciones": 1279,
+      "finalizadas": 310,
+      "abandonadas": 128,
+      "certificados": 160,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 160,
+      "media_dias_validos": 68.91
+    },
+    {
+      "categoria": "Ciencia de Datos e IA",
+      "inscripciones": 1189,
+      "finalizadas": 299,
+      "abandonadas": 116,
+      "certificados": 159,
+      "fechas_invertidas": 1,
+      "pares_con_dias_validos": 158,
+      "media_dias_validos": 69.87
+    },
+    {
+      "categoria": "Diseño Gráfico y UX/UI",
+      "inscripciones": 1104,
+      "finalizadas": 268,
+      "abandonadas": 114,
+      "certificados": 131,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 131,
+      "media_dias_validos": 72.11
+    },
+    {
+      "categoria": "Idiomas",
+      "inscripciones": 797,
+      "finalizadas": 184,
+      "abandonadas": 99,
+      "certificados": 98,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 98,
+      "media_dias_validos": 72.5
+    },
+    {
+      "categoria": "Música y Audio",
+      "inscripciones": 517,
+      "finalizadas": 140,
+      "abandonadas": 46,
+      "certificados": 74,
+      "fechas_invertidas": 0,
+      "pares_con_dias_validos": 74,
+      "media_dias_validos": 72.92
+    }
+  ],
+  "aprendizaje": {
+    "inscripciones": 12833,
+    "finalizadas": 3234,
+    "abandonadas": 1288,
+    "certificados": 1617,
+    "personas_con_inscripcion": 5000,
+    "personas_inscritas_por_rol": {
+      "estudiante": 4979
+    },
+    "certificados_sin_inscripcion": 0,
+    "certificados_sin_fechas_validas": 0,
+    "fechas_invertidas": 1,
+    "media_dias_original": 70.23,
+    "media_dias_validos": 70.28,
+    "cursos_publicados": 150
+  },
+  "planes": [
+    {
+      "plan": "Empresarial",
+      "suscripciones": 303,
+      "intentos": 303,
+      "completados": 276,
+      "centavos_cobrados": 5519724
+    },
+    {
+      "plan": "Premium",
+      "suscripciones": 882,
+      "intentos": 882,
+      "completados": 814,
+      "centavos_cobrados": 4069186
+    },
+    {
+      "plan": "Profesional",
+      "suscripciones": 1442,
+      "intentos": 1442,
+      "completados": 1290,
+      "centavos_cobrados": 3223710
+    },
+    {
+      "plan": "Básico",
+      "suscripciones": 1607,
+      "intentos": 1607,
+      "completados": 1456,
+      "centavos_cobrados": 1454544
+    },
+    {
+      "plan": "Gratuito",
+      "suscripciones": 1260,
+      "intentos": 1260,
+      "completados": 1260,
+      "centavos_cobrados": 0
+    }
+  ]
+}

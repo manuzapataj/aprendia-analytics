@@ -2,11 +2,13 @@
 
 [Leer en español](README.md)
 
-Aprendia is a team capstone on a simulated e-learning platform. Our team of three analyzed 52,404 records across 12 tables to understand enrollment, course completion, subscriptions and revenue.
+Aprendia is a team capstone on a simulated e-learning platform. We studied enrollment, course completion and certification, and compared subscription volume with collected revenue. The final presentation reports 52,404 records. The reproducible Power BI workbook extract contains 51,961 rows across 12 tables.
+
+The [analysis notebook](analisis_aprendia.ipynb), [five MySQL queries](sql/preguntas_negocio_mysql.sql) and [Power BI screenshots and DAX measures](docs/power_bi.md) are available in Spanish. The notebook uses the included aggregate data and documents the integrity checks behind the results.
 
 ## My contribution
 
-I wrote MySQL queries for business questions, used Python and Pandas to clean and validate data, and built Power BI views for enrollment, completion, subscriptions and revenue. This repository illustrates one of my queries with a small synthetic dataset.
+I wrote MySQL queries for business questions, used Python and Pandas to clean and validate data, and built Power BI views for enrollment, completion, subscriptions and revenue. The following demo illustrates one of my queries with a small synthetic dataset.
 
 ## How do subscription volume and collected revenue compare across plans?
 

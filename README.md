@@ -2,11 +2,28 @@
 
 [Read in English](README.en.md)
 
-Aprendia fue un proyecto de fin de bootcamp sobre una plataforma de aprendizaje simulada. En un equipo de tres personas, analizamos **52.404 registros en 12 tablas** para entender las inscripciones, la finalización de cursos, las suscripciones y los ingresos.
+Aprendia fue un proyecto de fin de bootcamp sobre una plataforma de aprendizaje simulada. Analizamos cómo las inscripciones se convertían en cursos finalizados y certificados, y qué planes generaban los ingresos cobrados.
+
+## Explora el proyecto
+
+| Material | Qué puedes revisar |
+| --- | --- |
+| [Cuaderno de análisis en Python](analisis_aprendia.ipynb) | Controles de claves, recorrido del estudiante, cálculo de ingresos y conciliación con el informe final. |
+| [Cinco preguntas de negocio en MySQL](sql/preguntas_negocio_mysql.sql) | Consultas del bootcamp sobre planes, docentes, estructura de cursos, certificación y tiempo hasta el certificado. |
+| [Tablero de Power BI y medidas DAX](docs/power_bi.md) | Capturas de la presentación final, relaciones del modelo y medidas de seguimiento. |
+| [Script de preparación](preparar_agregados.py) | Código en Python y Pandas que transforma el Excel original en el [extracto agregado](datos/corte_agregado.json). |
+
+## Resultados en el extracto de Power BI
+
+- **12.833 inscripciones**, con **25,2 %** finalizadas y **1.617 certificados** en la plataforma simulada.
+- **USD 142.671,64 cobrados** en pagos completados. Empresarial concentró **38,7 %** del importe cobrado con **5,5 %** de las suscripciones.
+- La auditoría del extracto detectó **2.663 lecciones sin módulo correspondiente** y una certificación anterior a la inscripción. El cuaderno documenta cómo afectan estas diferencias al análisis de contenido y de duración.
+
+El informe de entrega consigna **52.404 filas**. El [cuaderno](analisis_aprendia.ipynb) verifica **51.961** en las 12 tablas del Excel de Power BI y muestra la conciliación con el informe.
 
 ## Mi aporte
 
-Escribí consultas en MySQL, limpié y validé datos con Python y Pandas y construí vistas en Power BI para hacer seguimiento de esos indicadores. El repositorio reproduce una de mis consultas con un conjunto pequeño de datos sintéticos.
+Escribí consultas en MySQL, limpié y validé datos con Python y Pandas y construí vistas en Power BI para hacer seguimiento de esos indicadores. El trabajo académico se realizó en equipo con Astrid Rodríguez y Valerie Avendaño.
 
 ## ¿Cómo se comparan las suscripciones y los ingresos cobrados por plan?
 
@@ -32,3 +49,10 @@ python run_demo.py
 ```
 
 El [esquema y los datos del ejemplo](sql/demo_data.sql) almacenan los montos en centavos enteros. El proyecto original se desarrolló con MySQL, Python y Power BI.
+
+Para revisar los resultados del proyecto, abre el [cuaderno](analisis_aprendia.ipynb) desde la raíz del repositorio en Jupyter con Python y Pandas. El cuaderno usa el agregado incluido. El script permite recalcularlo si tienes el Excel del proyecto.
+
+```sh
+python -m pip install -r requirements.txt
+python preparar_agregados.py ruta/PowerBI_Aprendia_Paquete.xlsx
+```
